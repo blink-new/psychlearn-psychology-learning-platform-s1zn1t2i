@@ -1385,6 +1385,283 @@ The journey from despair to recovery is possible with appropriate treatment, sup
     isBookmarked: false,
     progress: 'not-started' as const,
     relatedTopics: ['attachment-theory-bowlby', 'working-memory-model']
+  },
+  {
+    id: 'operant-conditioning',
+    title: 'Operant Conditioning and Reinforcement',
+    field: 'behavioral',
+    difficulty: 'intermediate',
+    contentType: 'theory',
+    timePeriod: 'modern',
+    readingTime: 14,
+    description: 'B.F. Skinner\'s comprehensive theory of learning through consequences, including reinforcement schedules and behavior modification techniques.',
+    content: `# Operant Conditioning: Learning Through Consequences
+
+## Introduction
+
+Operant conditioning, developed by B.F. Skinner (1904-1990), represents one of the most influential theories in behavioral psychology. Unlike classical conditioning, which focuses on reflexive responses to stimuli, operant conditioning examines how voluntary behaviors are shaped by their consequences. This learning process forms the foundation for understanding motivation, behavior modification, and skill acquisition across species.
+
+## Historical Development
+
+### B.F. Skinner's Contributions
+Skinner built upon Edward Thorndike's Law of Effect, which stated that behaviors followed by satisfying consequences are more likely to be repeated. Skinner refined this concept through systematic experimentation, developing precise terminology and demonstrating the power of environmental contingencies in shaping behavior.
+
+### The Skinner Box
+Skinner's experimental apparatus, known as the operant conditioning chamber or "Skinner box," allowed for controlled study of behavior-consequence relationships. These chambers contained levers, lights, food dispensers, and other stimuli that could be precisely controlled to study learning patterns.
+
+## Core Principles
+
+### Operant Behavior
+Operant behaviors are voluntary actions that "operate" on the environment to produce consequences. Unlike respondent behaviors (reflexes), operants are emitted rather than elicited, meaning organisms actively produce these behaviors rather than automatically responding to stimuli.
+
+### The Three-Term Contingency
+Skinner identified the fundamental unit of behavioral analysis as the three-term contingency:
+- **Antecedent (A)**: Environmental conditions present before the behavior
+- **Behavior (B)**: The specific action or response
+- **Consequence (C)**: What happens immediately after the behavior
+
+This A-B-C relationship forms the basis for understanding and predicting behavioral patterns.
+
+## Types of Consequences
+
+### Reinforcement
+Reinforcement increases the likelihood that a behavior will be repeated. Skinner identified two types:
+
+**Positive Reinforcement**
+- Adding something desirable after a behavior
+- Examples: praise for good performance, money for work, food for lever pressing
+- Strengthens behavior by providing pleasant consequences
+
+**Negative Reinforcement**
+- Removing something unpleasant after a behavior
+- Examples: taking aspirin to relieve headache, fastening seatbelt to stop beeping
+- Often misunderstood as punishment, but actually strengthens behavior
+
+### Punishment
+Punishment decreases the likelihood that a behavior will be repeated:
+
+**Positive Punishment**
+- Adding something unpleasant after a behavior
+- Examples: speeding ticket, verbal reprimand, electric shock
+- Suppresses behavior through aversive consequences
+
+**Negative Punishment**
+- Removing something desirable after a behavior
+- Examples: timeout, loss of privileges, fines
+- Reduces behavior by taking away preferred items or activities
+
+## Schedules of Reinforcement
+
+### Continuous Reinforcement
+Every occurrence of the target behavior is reinforced. This schedule produces rapid learning but also quick extinction when reinforcement stops.
+
+### Partial (Intermittent) Reinforcement
+Only some occurrences of the behavior are reinforced. These schedules create more persistent behavior patterns and greater resistance to extinction.
+
+**Fixed Ratio (FR)**
+- Reinforcement after a fixed number of responses
+- Example: FR-5 means reinforcement after every 5th response
+- Produces high, steady response rates with brief pauses after reinforcement
+
+**Variable Ratio (VR)**
+- Reinforcement after an average number of responses
+- Example: VR-10 means reinforcement after an average of 10 responses
+- Creates the highest, most consistent response rates
+- Highly resistant to extinction (gambling behavior)
+
+**Fixed Interval (FI)**
+- Reinforcement for the first response after a fixed time period
+- Example: FI-60s means reinforcement for first response after 60 seconds
+- Produces scalloped response patterns with increased responding near reinforcement time
+
+**Variable Interval (VI)**
+- Reinforcement for the first response after variable time periods
+- Example: VI-30s means reinforcement after an average of 30 seconds
+- Produces steady, moderate response rates
+- Very resistant to extinction
+
+## Applications and Contemporary Research
+
+### Educational Applications
+- Token economies in classrooms
+- Programmed instruction and computer-assisted learning
+- Behavior modification for academic performance
+- Special education interventions
+
+### Clinical Psychology
+- Behavior therapy for phobias and anxiety
+- Treatment of autism spectrum disorders
+- Addiction treatment programs
+- Depression and behavioral activation
+
+### Organizational Behavior
+- Performance management systems
+- Employee motivation and incentive programs
+- Safety training and compliance
+- Leadership development
+
+## Conclusion
+
+Operant conditioning remains one of psychology's most practical and widely applied theories. Its principles continue to inform educational practices, therapeutic interventions, organizational management, and technology design. Understanding these principles empowers individuals to recognize how their own behavior is shaped by environmental contingencies and to use this knowledge for personal growth and positive change.`,
+    tags: ['learning', 'behaviorism', 'skinner', 'reinforcement', 'conditioning', 'behavior-modification'],
+    lastUpdated: '2024-02-05',
+    author: 'Dr. Patricia Williams, Behavioral Psychology',
+    citations: [
+      'Skinner, B. F. (1953). Science and human behavior. Macmillan.',
+      'Ferster, C. B., & Skinner, B. F. (1957). Schedules of reinforcement. Appleton-Century-Crofts.',
+      'Martin, G., & Pear, J. (2019). Behavior modification: What it is and how to do it (11th ed.). Pearson.'
+    ],
+    isBookmarked: false,
+    progress: 'not-started' as const,
+    relatedTopics: ['classical-conditioning', 'social-identity-theory']
+  },
+  {
+    id: 'social-identity-theory',
+    title: 'Social Identity Theory',
+    field: 'social',
+    difficulty: 'advanced',
+    contentType: 'theory',
+    timePeriod: 'contemporary',
+    readingTime: 16,
+    description: 'Henri Tajfel and John Turner\'s influential theory explaining how group membership shapes individual identity and intergroup behavior.',
+    content: `# Social Identity Theory: Understanding Group Membership and Identity
+
+## Introduction
+
+Social Identity Theory, developed by Henri Tajfel and John Turner in the 1970s and 1980s, provides a comprehensive framework for understanding how individuals derive part of their identity from group memberships and how this influences intergroup behavior. The theory explains phenomena ranging from prejudice and discrimination to group loyalty and social change.
+
+## Historical Context and Development
+
+### Henri Tajfel's Background
+Henri Tajfel (1919-1982), a Polish-Jewish psychologist who survived the Holocaust, was deeply motivated to understand the psychological processes underlying prejudice and discrimination. His personal experiences with persecution informed his scientific quest to explain how ordinary people could engage in extraordinary acts of cruelty based on group differences.
+
+### The Minimal Group Paradigm
+Tajfel's groundbreaking research used the minimal group paradigm, where participants were randomly assigned to groups based on trivial criteria (such as preference for paintings by Klee or Kandinsky). Even with these meaningless distinctions, participants showed favoritism toward their own group and discrimination against the outgroup.
+
+## Core Components of Social Identity Theory
+
+### Social Categorization
+Humans naturally categorize themselves and others into social groups based on shared characteristics such as:
+- **Demographic factors**: Age, gender, race, ethnicity
+- **Social roles**: Occupation, family status, student/teacher
+- **Beliefs and values**: Political affiliation, religion, lifestyle choices
+- **Interests and activities**: Sports teams, hobbies, academic disciplines
+
+### Social Identification
+Once individuals categorize themselves as group members, they begin to identify with the group, adopting its norms, values, and characteristics as part of their self-concept.
+
+### Social Comparison
+Groups and their members engage in social comparison to establish and maintain positive distinctiveness. This involves comparing the ingroup favorably to relevant outgroups.
+
+## Applications and Implications
+
+### Prejudice and Discrimination
+Social Identity Theory explains how prejudice can arise from normal cognitive processes rather than individual pathology.
+
+### Organizational Behavior
+In workplace settings, Social Identity Theory explains team dynamics, organizational commitment, and leadership effectiveness.
+
+### Intergroup Conflict and Resolution
+The theory provides insights into conflict escalation and resolution strategies.
+
+## Contemporary Developments
+
+### Multiple Identities
+Modern research recognizes that individuals hold multiple, sometimes conflicting social identities.
+
+### Digital Age Implications
+Social media and online communities have created new contexts for social identity processes.
+
+## Conclusion
+
+Social Identity Theory has fundamentally changed our understanding of human social behavior by highlighting the central role of group membership in shaping individual identity and intergroup relations. The theory's insights continue to inform research and practice across numerous domains.`,
+    tags: ['social-psychology', 'identity', 'groups', 'prejudice', 'discrimination', 'intergroup-relations'],
+    lastUpdated: '2024-02-06',
+    author: 'Dr. Amanda Foster, Social Psychology',
+    citations: [
+      'Tajfel, H., & Turner, J. C. (1979). An integrative theory of intergroup conflict. In W. G. Austin & S. Worchel (Eds.), The social psychology of intergroup relations (pp. 33-47). Brooks/Cole.',
+      'Tajfel, H. (1981). Human groups and social categories. Cambridge University Press.',
+      'Turner, J. C., Hogg, M. A., Oakes, P. J., Reicher, S. D., & Wetherell, M. S. (1987). Rediscovering the social group: A self-categorization theory. Basil Blackwell.'
+    ],
+    isBookmarked: false,
+    progress: 'not-started' as const,
+    relatedTopics: ['cognitive-dissonance', 'operant-conditioning']
+  },
+  {
+    id: 'memory-consolidation',
+    title: 'Memory Consolidation and Sleep',
+    field: 'cognitive',
+    difficulty: 'advanced',
+    contentType: 'theory',
+    timePeriod: 'contemporary',
+    readingTime: 17,
+    description: 'The complex process of how memories are stabilized and integrated through sleep and time, involving synaptic and systems-level consolidation.',
+    content: `# Memory Consolidation: The Journey from Experience to Long-Term Storage
+
+## Introduction
+
+Memory consolidation represents one of the most fascinating and complex processes in neuroscience and cognitive psychology. It describes how fragile, newly formed memories are gradually stabilized and integrated into our existing knowledge networks. This process involves intricate molecular, cellular, and systems-level changes in the brain.
+
+## Types of Memory Consolidation
+
+### Synaptic Consolidation
+Synaptic consolidation occurs within hours of learning and involves molecular and cellular changes at individual synapses.
+
+**Molecular Mechanisms**
+- **Protein synthesis**: New proteins are required to stabilize synaptic changes
+- **Gene expression**: Immediate early genes are activated to support long-term changes
+- **Synaptic plasticity**: Long-term potentiation (LTP) and depression (LTD) modify synaptic strength
+
+### Systems Consolidation
+Systems consolidation is a much longer process, potentially lasting years or decades, involving the reorganization of memory storage across brain regions.
+
+**Hippocampal-Neocortical Dialogue**
+- **Initial storage**: Hippocampus rapidly encodes new experiences
+- **Gradual transfer**: Information slowly transfers to neocortical areas
+- **Integration**: New memories become integrated with existing knowledge
+
+## The Role of Sleep in Memory Consolidation
+
+### Sleep Stages and Memory
+Different stages of sleep contribute uniquely to memory consolidation:
+
+**Slow-Wave Sleep (SWS)**
+- **Declarative memory**: Consolidates facts and events
+- **Hippocampal replay**: Reactivation of learning-related neural patterns
+- **Sleep spindles**: Thalamic oscillations that facilitate memory transfer
+
+**REM Sleep**
+- **Procedural memory**: Consolidates skills and habits
+- **Emotional memory**: Processes emotional aspects of experiences
+- **Creative insights**: Facilitates novel connections between ideas
+
+## Clinical Implications
+
+### Memory Disorders
+Understanding consolidation has illuminated various memory disorders including Alzheimer's disease, PTSD, and depression.
+
+### Therapeutic Applications
+Memory enhancement and modification techniques based on consolidation principles.
+
+## Educational Applications
+
+### Optimizing Learning
+Understanding consolidation has transformed educational practices through spacing effects, sleep optimization, and strategic timing of learning sessions.
+
+## Conclusion
+
+Memory consolidation represents a fundamental process that transforms our fleeting experiences into lasting knowledge and skills. Understanding consolidation provides practical insights for education, therapy, and human enhancement.`,
+    tags: ['memory', 'consolidation', 'sleep', 'neuroscience', 'learning', 'synaptic-plasticity'],
+    lastUpdated: '2024-02-07',
+    author: 'Dr. Rachel Martinez, Cognitive Neuroscience',
+    citations: [
+      'Dudai, Y., Karni, A., & Born, J. (2015). The consolidation and transformation of memory. Neuron, 88(1), 20-32.',
+      'Diekelmann, S., & Born, J. (2010). The memory function of sleep. Nature Reviews Neuroscience, 11(2), 114-126.',
+      'McGaugh, J. L. (2000). Memory--a century of consolidation. Science, 287(5451), 248-251.'
+    ],
+    isBookmarked: false,
+    progress: 'not-started' as const,
+    relatedTopics: ['working-memory-model', 'classical-conditioning']
   }
 ]
 
@@ -1759,6 +2036,231 @@ export const realQuizzes: Quiz[] = [
         correctAnswer: 2,
         explanation: 'The lifetime prevalence of Major Depressive Disorder in the United States is approximately 10.8%, making it one of the most common mental health conditions. The 12-month prevalence is about 7% in young adults.',
         difficulty: 'hard'
+      }
+    ],
+    timeLimit: 600,
+    passingScore: 70
+  },
+  {
+    id: 'operant-conditioning-quiz',
+    topicId: 'operant-conditioning',
+    title: 'Operant Conditioning Assessment',
+    description: 'Test your understanding of Skinner\'s operant conditioning principles and reinforcement schedules.',
+    questions: [
+      {
+        id: 'oc-q1',
+        question: 'What is the main difference between operant and classical conditioning?',
+        options: [
+          'Operant conditioning involves voluntary behaviors, classical conditioning involves reflexive responses',
+          'Operant conditioning is faster than classical conditioning',
+          'Classical conditioning is more effective than operant conditioning',
+          'There is no significant difference between the two'
+        ],
+        correctAnswer: 0,
+        explanation: 'Operant conditioning focuses on voluntary behaviors that are emitted by the organism and shaped by their consequences, while classical conditioning involves automatic, reflexive responses to stimuli.',
+        difficulty: 'easy'
+      },
+      {
+        id: 'oc-q2',
+        question: 'Which reinforcement schedule produces the highest and most consistent response rates?',
+        options: [
+          'Fixed ratio',
+          'Variable ratio',
+          'Fixed interval',
+          'Variable interval'
+        ],
+        correctAnswer: 1,
+        explanation: 'Variable ratio schedules produce the highest and most consistent response rates because the unpredictability of reinforcement keeps organisms responding at high rates. This is why gambling can be so addictive.',
+        difficulty: 'medium'
+      },
+      {
+        id: 'oc-q3',
+        question: 'Negative reinforcement involves:',
+        options: [
+          'Adding something unpleasant after a behavior',
+          'Removing something pleasant after a behavior',
+          'Removing something unpleasant after a behavior',
+          'Ignoring the behavior completely'
+        ],
+        correctAnswer: 2,
+        explanation: 'Negative reinforcement involves removing something unpleasant (like pain, noise, or discomfort) after a behavior occurs, which increases the likelihood that the behavior will be repeated. It strengthens behavior, unlike punishment.',
+        difficulty: 'medium'
+      },
+      {
+        id: 'oc-q4',
+        question: 'The three-term contingency in operant conditioning consists of:',
+        options: [
+          'Stimulus, Response, Consequence',
+          'Antecedent, Behavior, Consequence',
+          'Unconditioned Stimulus, Conditioned Stimulus, Response',
+          'Positive Reinforcement, Negative Reinforcement, Punishment'
+        ],
+        correctAnswer: 1,
+        explanation: 'The three-term contingency (A-B-C) consists of Antecedent (environmental conditions before the behavior), Behavior (the specific action), and Consequence (what happens after the behavior). This forms the basic unit of behavioral analysis.',
+        difficulty: 'hard'
+      },
+      {
+        id: 'oc-q5',
+        question: 'Shaping involves:',
+        options: [
+          'Punishing incorrect behaviors',
+          'Reinforcing successive approximations toward a target behavior',
+          'Using only continuous reinforcement',
+          'Ignoring all behaviors except the final desired one'
+        ],
+        correctAnswer: 1,
+        explanation: 'Shaping involves reinforcing successive approximations (behaviors that are increasingly similar to the target behavior) until the desired behavior is achieved. This technique allows for the development of complex behaviors that might never occur naturally.',
+        difficulty: 'hard'
+      }
+    ],
+    timeLimit: 600,
+    passingScore: 70
+  },
+  {
+    id: 'social-identity-quiz',
+    topicId: 'social-identity-theory',
+    title: 'Social Identity Theory Assessment',
+    description: 'Evaluate your knowledge of Tajfel and Turner\'s social identity theory and group behavior.',
+    questions: [
+      {
+        id: 'sit-q1',
+        question: 'According to Social Identity Theory, what are the three main processes involved in group membership?',
+        options: [
+          'Social categorization, social identification, social comparison',
+          'Ingroup favoritism, outgroup derogation, stereotyping',
+          'Conformity, compliance, obedience',
+          'Attribution, perception, cognition'
+        ],
+        correctAnswer: 0,
+        explanation: 'Social Identity Theory identifies three key processes: social categorization (dividing people into groups), social identification (adopting group identity), and social comparison (comparing groups to maintain positive distinctiveness).',
+        difficulty: 'easy'
+      },
+      {
+        id: 'sit-q2',
+        question: 'The minimal group paradigm demonstrated that:',
+        options: [
+          'People only show favoritism when groups have meaningful differences',
+          'Group favoritism requires competition for resources',
+          'People show ingroup favoritism even with trivial group distinctions',
+          'Prejudice only occurs in real-world settings'
+        ],
+        correctAnswer: 2,
+        explanation: 'Tajfel\'s minimal group studies showed that people display ingroup favoritism and outgroup discrimination even when group membership is based on trivial, meaningless criteria like preference for abstract paintings.',
+        difficulty: 'medium'
+      },
+      {
+        id: 'sit-q3',
+        question: 'What motivated Henri Tajfel to develop Social Identity Theory?',
+        options: [
+          'Academic curiosity about group dynamics',
+          'His experiences as a Holocaust survivor wanting to understand prejudice',
+          'Government funding for intergroup research',
+          'Competition with other social psychologists'
+        ],
+        correctAnswer: 1,
+        explanation: 'Henri Tajfel, a Polish-Jewish psychologist who survived the Holocaust, was deeply motivated by his personal experiences with persecution to understand the psychological processes underlying prejudice and discrimination.',
+        difficulty: 'medium'
+      },
+      {
+        id: 'sit-q4',
+        question: 'According to Social Identity Theory, positive distinctiveness refers to:',
+        options: [
+          'Being different from others in any way',
+          'Having unique individual characteristics',
+          'Making the ingroup appear superior to outgroups',
+          'Avoiding conflict with other groups'
+        ],
+        correctAnswer: 2,
+        explanation: 'Positive distinctiveness involves making favorable comparisons between the ingroup and outgroups to maintain a positive group identity and enhance self-esteem through group membership.',
+        difficulty: 'hard'
+      },
+      {
+        id: 'sit-q5',
+        question: 'Which of the following is NOT typically a consequence of strong social identification?',
+        options: [
+          'Increased cooperation with ingroup members',
+          'Enhanced self-esteem through group membership',
+          'Greater objectivity in evaluating group performance',
+          'Adoption of group norms and values'
+        ],
+        correctAnswer: 2,
+        explanation: 'Strong social identification typically leads to biased (not objective) evaluation of group performance, along with increased ingroup cooperation, enhanced self-esteem, and adoption of group norms.',
+        difficulty: 'hard'
+      }
+    ],
+    timeLimit: 600,
+    passingScore: 70
+  },
+  {
+    id: 'memory-consolidation-quiz',
+    topicId: 'memory-consolidation',
+    title: 'Memory Consolidation Assessment',
+    description: 'Test your understanding of memory consolidation processes and the role of sleep in memory formation.',
+    questions: [
+      {
+        id: 'mc-q1',
+        question: 'What is the main difference between synaptic and systems consolidation?',
+        options: [
+          'Synaptic consolidation is faster and occurs at individual synapses, systems consolidation is slower and involves brain regions',
+          'Synaptic consolidation involves the hippocampus, systems consolidation involves the cortex',
+          'Systems consolidation is more important than synaptic consolidation',
+          'There is no significant difference between the two processes'
+        ],
+        correctAnswer: 0,
+        explanation: 'Synaptic consolidation occurs within hours and involves molecular changes at individual synapses, while systems consolidation takes years and involves the reorganization of memory storage across different brain regions.',
+        difficulty: 'easy'
+      },
+      {
+        id: 'mc-q2',
+        question: 'Which sleep stage is most important for consolidating declarative (factual) memories?',
+        options: [
+          'REM sleep',
+          'Slow-wave sleep (SWS)',
+          'Stage 1 NREM sleep',
+          'All stages are equally important'
+        ],
+        correctAnswer: 1,
+        explanation: 'Slow-wave sleep (SWS) is crucial for consolidating declarative memories through processes like hippocampal replay and sleep spindles that facilitate the transfer of information from hippocampus to cortex.',
+        difficulty: 'medium'
+      },
+      {
+        id: 'mc-q3',
+        question: 'Sharp-wave ripples during sleep are important because they:',
+        options: [
+          'Prevent dreaming',
+          'Allow for memory replay and consolidation',
+          'Regulate body temperature',
+          'Control hormone release'
+        ],
+        correctAnswer: 1,
+        explanation: 'Sharp-wave ripples are high-frequency oscillations during slow-wave sleep that allow for the reactivation and replay of learning-related neural patterns, facilitating memory consolidation.',
+        difficulty: 'hard'
+      },
+      {
+        id: 'mc-q4',
+        question: 'The hippocampal-neocortical dialogue refers to:',
+        options: [
+          'Communication between left and right brain hemispheres',
+          'The gradual transfer of memories from hippocampus to cortex',
+          'Conflict between emotional and rational thinking',
+          'The process of forgetting unwanted memories'
+        ],
+        correctAnswer: 1,
+        explanation: 'The hippocampal-neocortical dialogue describes the gradual process by which memories initially stored in the hippocampus are slowly transferred to and integrated with neocortical areas during systems consolidation.',
+        difficulty: 'hard'
+      },
+      {
+        id: 'mc-q5',
+        question: 'Sleep deprivation primarily affects memory consolidation by:',
+        options: [
+          'Preventing the formation of new synapses',
+          'Disrupting the replay and transfer processes that occur during sleep',
+          'Causing permanent damage to the hippocampus',
+          'Increasing stress hormones that destroy memories'
+        ],
+        correctAnswer: 1,
+        explanation: 'Sleep deprivation impairs memory consolidation primarily by disrupting the critical replay and transfer processes that occur during different sleep stages, preventing proper stabilization and integration of new memories.',
+        difficulty: 'medium'
       }
     ],
     timeLimit: 600,

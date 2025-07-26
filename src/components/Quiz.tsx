@@ -224,10 +224,9 @@ export function Quiz({ quiz, onComplete }: QuizProps) {
           </Button>
           <Button
             onClick={handleNext}
-            disabled={selectedAnswers[currentQuestion] === undefined}
-            loading={isSubmitting}
+            disabled={selectedAnswers[currentQuestion] === undefined || isSubmitting}
           >
-            {currentQuestion === questions.length - 1 ? 'Submit Quiz' : 'Next'}
+            {isSubmitting ? 'Submitting...' : (currentQuestion === questions.length - 1 ? 'Submit Quiz' : 'Next')}
           </Button>
         </div>
       </CardContent>

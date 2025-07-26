@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ArrowLeft, Bookmark, Share2, Clock, Calendar, Tag, ExternalLink, ChevronRight, Brain, Users, BookOpen } from 'lucide-react'
 import { Button } from './ui/button'
 import { Badge } from './ui/badge'
@@ -9,7 +9,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs'
 import { PsychologyTopic } from '../types/psychology'
 import { Quiz } from './Quiz'
 import { AIStudyAssistant } from './AIStudyAssistant'
+import { QASection } from './QASection'
 import { psychologyTopics, quizzes } from '../data/mockData'
+import { blink } from '../blink/client'
 
 interface TopicDetailProps {
   topic: PsychologyTopic
@@ -20,6 +22,16 @@ interface TopicDetailProps {
 export function TopicDetail({ topic, onBack, onBookmarkToggle }: TopicDetailProps) {
   const [activeSection, setActiveSection] = useState<string>('')
   const [activeTab, setActiveTab] = useState('content')
+  const [quizBookmarked, setQuizBookmarked] = useState(false)
+  const [user, setUser] = useState(null)
+
+  // Auth state management
+  useEffect(() => {
+    const unsubscribe = blink.auth.onAuthStateChanged((state) => {
+      setUser(state.user)
+    })
+    return unsubscribe
+  }, [])
 
   const getFieldClass = (field: string) => `field-${field}`
   const getDifficultyClass = (difficulty: string) => `difficulty-${difficulty}`
@@ -51,6 +63,47 @@ export function TopicDetail({ topic, onBack, onBookmarkToggle }: TopicDetailProp
     console.log(`Quiz completed with score: ${score}%`)
     // Could show a success message or update progress
   }
+
+  const handleQuizBookmark = async () => {
+    if (!user || !topicQuiz) return
+
+    try {
+      if (quizBookmarked) {
+        // Remove bookmark
+        await blink.db.quiz_bookmarks.delete(`${topicQuiz.id}_${user.id}`)
+        setQuizBookmarked(false)
+      } else {
+        // Add bookmark
+        await blink.db.quiz_bookmarks.create({
+          id: `${topicQuiz.id}_${user.id}`,
+          user_id: user.id,
+          quiz_id: topicQuiz.id,
+          topic_id: topic.id,
+          bookmarked_at: new Date().toISOString()
+        })
+        setQuizBookmarked(true)
+      }
+    } catch (error) {
+      console.error('Failed to toggle quiz bookmark:', error)
+    }
+  }
+
+  // Check if quiz is bookmarked
+  useEffect(() => {
+    const checkQuizBookmark = async () => {
+      if (user && topicQuiz) {
+        try {
+          const bookmark = await blink.db.quiz_bookmarks.list({
+            where: { user_id: user.id, quiz_id: topicQuiz.id }
+          })
+          setQuizBookmarked(bookmark.length > 0)
+        } catch (error) {
+          console.error('Failed to check quiz bookmark:', error)
+        }
+      }
+    }
+    checkQuizBookmark()
+  }, [user, topicQuiz])
 
   return (
     <div className="flex h-full">
@@ -113,7 +166,7 @@ export function TopicDetail({ topic, onBack, onBookmarkToggle }: TopicDetailProp
 
           {/* Tabbed Content */}
           <Tabs value={activeTab} onValueChange={setActiveTab} className="h-[calc(100vh-300px)]">
-            <TabsList className="grid w-full grid-cols-4">
+            <TabsList className="grid w-full grid-cols-5">
               <TabsTrigger value="content" className="flex items-center gap-2">
                 <BookOpen className="h-4 w-4" />
                 Content
@@ -125,6 +178,10 @@ export function TopicDetail({ topic, onBack, onBookmarkToggle }: TopicDetailProp
               <TabsTrigger value="ai-assistant" className="flex items-center gap-2">
                 <Brain className="h-4 w-4" />
                 AI Assistant
+              </TabsTrigger>
+              <TabsTrigger value="qa" className="flex items-center gap-2">
+                <Users className="h-4 w-4" />
+                Q&A
               </TabsTrigger>
               <TabsTrigger value="study-groups" className="flex items-center gap-2">
                 <Users className="h-4 w-4" />
@@ -264,25 +321,48 @@ export function TopicDetail({ topic, onBack, onBookmarkToggle }: TopicDetailProp
             </TabsContent>
 
             <TabsContent value="quiz" className="h-full mt-6">
-              <div className="h-full flex items-center justify-center">
+              <div className="h-full">
                 {topicQuiz ? (
-                  <Quiz 
-                    quiz={topicQuiz}
-                    onComplete={handleQuizComplete}
-                  />
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="text-lg font-semibold">{topicQuiz.title}</h3>
+                        <p className="text-sm text-muted-foreground">{topicQuiz.description}</p>
+                      </div>
+                      {user && (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={handleQuizBookmark}
+                          className="flex items-center gap-2"
+                        >
+                          <Bookmark className={`h-4 w-4 ${quizBookmarked ? 'fill-current text-primary' : ''}`} />
+                          {quizBookmarked ? 'Bookmarked' : 'Bookmark Quiz'}
+                        </Button>
+                      )}
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <Quiz 
+                        quiz={topicQuiz}
+                        onComplete={handleQuizComplete}
+                      />
+                    </div>
+                  </div>
                 ) : (
-                  <Card className="w-full max-w-md text-center">
-                    <CardContent className="pt-6">
-                      <Brain className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                      <h3 className="text-lg font-medium mb-2">No Quiz Available</h3>
-                      <p className="text-muted-foreground mb-4">
-                        Quiz questions for this topic are coming soon. Check back later!
-                      </p>
-                      <Button variant="outline" onClick={() => setActiveTab('ai-assistant')}>
-                        Try AI Assistant Instead
-                      </Button>
-                    </CardContent>
-                  </Card>
+                  <div className="h-full flex items-center justify-center">
+                    <Card className="w-full max-w-md text-center">
+                      <CardContent className="pt-6">
+                        <Brain className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                        <h3 className="text-lg font-medium mb-2">No Quiz Available</h3>
+                        <p className="text-muted-foreground mb-4">
+                          Quiz questions for this topic are coming soon. Check back later!
+                        </p>
+                        <Button variant="outline" onClick={() => setActiveTab('ai-assistant')}>
+                          Try AI Assistant Instead
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  </div>
                 )}
               </div>
             </TabsContent>
@@ -290,6 +370,15 @@ export function TopicDetail({ topic, onBack, onBookmarkToggle }: TopicDetailProp
             <TabsContent value="ai-assistant" className="h-full mt-6">
               <div className="h-full flex items-center justify-center">
                 <AIStudyAssistant 
+                  topicId={topic.id}
+                  topicTitle={topic.title}
+                />
+              </div>
+            </TabsContent>
+
+            <TabsContent value="qa" className="h-full mt-6">
+              <div className="h-full overflow-y-auto">
+                <QASection 
                   topicId={topic.id}
                   topicTitle={topic.title}
                 />

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Search, Menu, User, BookOpen, Settings, Moon, Sun, Users, Home } from 'lucide-react'
+import { Search, Menu, User, BookOpen, Settings, Moon, Sun, Users, Home, Bookmark } from 'lucide-react'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet'
@@ -85,6 +85,15 @@ export function Header({ onSearch, onToggleTheme, isDarkMode, currentView, onNav
             >
               <Users className="h-4 w-4" />
               Study Groups
+            </Button>
+            <Button
+              variant={currentView === 'quiz-bookmarks' ? 'default' : 'ghost'}
+              size="sm"
+              onClick={() => onNavigate('quiz-bookmarks')}
+              className="flex items-center gap-2"
+            >
+              <Bookmark className="h-4 w-4" />
+              Quiz Bookmarks
             </Button>
           </nav>
         )}

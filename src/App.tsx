@@ -4,12 +4,13 @@ import { Sidebar } from './components/layout/Sidebar'
 import { TopicCard } from './components/TopicCard'
 import { TopicDetail } from './components/TopicDetail'
 import { StudyGroups } from './components/StudyGroups'
+import { QuizBookmarks } from './components/QuizBookmarks'
 import { ErrorBoundary } from './components/ErrorBoundary'
 import { blink } from './blink/client'
 import { psychologyTopics, searchTopics, getTopicsByField, getTopicsByDifficulty } from './data/mockData'
 import { PsychologyTopic, PsychologyField, DifficultyLevel, ContentType, SearchFilters } from './types/psychology'
 
-type ViewType = 'topics' | 'study-groups' | 'topic-detail'
+type ViewType = 'topics' | 'study-groups' | 'quiz-bookmarks' | 'topic-detail'
 
 function App() {
   const [user, setUser] = useState(null)
@@ -219,6 +220,19 @@ function App() {
             <div className="h-full overflow-y-auto">
               <div className="container mx-auto p-6">
                 <StudyGroups />
+              </div>
+            </div>
+          ) : currentView === 'quiz-bookmarks' ? (
+            <div className="h-full overflow-y-auto">
+              <div className="container mx-auto p-6">
+                <QuizBookmarks onQuizSelect={(quiz) => {
+                  // Find the topic for this quiz and navigate to it
+                  const topic = psychologyTopics.find(t => t.id === quiz.topicId)
+                  if (topic) {
+                    setSelectedTopic(topic)
+                    setCurrentView('topic-detail')
+                  }
+                }} />
               </div>
             </div>
           ) : (

@@ -13,72 +13,72 @@ export const studyGroups: StudyGroup[] = [
     name: 'Cognitive Psychology Masters',
     description: 'Advanced study group focusing on cognitive psychology research and applications. We meet weekly to discuss current research papers and prepare for comprehensive exams.',
     topic: 'Cognitive Psychology',
-    memberCount: 24,
+    members: 24,
     maxMembers: 30,
     isPublic: true,
-    tags: ['cognitive', 'research', 'graduate-level', 'weekly-meetings'],
+    createdBy: 'Dr. Sarah Chen',
     createdAt: '2024-01-15',
-    lastActivity: '2024-02-01'
+    tags: ['cognitive', 'research', 'graduate-level', 'weekly-meetings']
   },
   {
     id: 'clinical-disorders-group',
     name: 'Clinical Disorders Study Circle',
     description: 'Comprehensive study group covering DSM-5 disorders, diagnostic criteria, and evidence-based treatments. Perfect for students preparing for clinical psychology programs.',
     topic: 'Clinical Psychology',
-    memberCount: 18,
+    members: 18,
     maxMembers: 25,
     isPublic: true,
-    tags: ['clinical', 'DSM-5', 'diagnosis', 'treatment'],
+    createdBy: 'Dr. Michael Rodriguez',
     createdAt: '2024-01-20',
-    lastActivity: '2024-01-31'
+    tags: ['clinical', 'DSM-5', 'diagnosis', 'treatment']
   },
   {
     id: 'developmental-research',
     name: 'Developmental Psychology Research Hub',
     description: 'Research-focused group exploring attachment theory, cognitive development, and lifespan psychology. We analyze classic studies and discuss contemporary research.',
     topic: 'Developmental Psychology',
-    memberCount: 15,
+    members: 15,
     maxMembers: 20,
     isPublic: true,
-    tags: ['developmental', 'attachment', 'research', 'lifespan'],
+    createdBy: 'Dr. Lisa Park',
     createdAt: '2024-01-10',
-    lastActivity: '2024-02-02'
+    tags: ['developmental', 'attachment', 'research', 'lifespan']
   },
   {
     id: 'social-psych-lab',
     name: 'Social Psychology Lab Discussion',
     description: 'Interactive group discussing social psychology experiments, theories, and real-world applications. We focus on understanding human behavior in social contexts.',
     topic: 'Social Psychology',
-    memberCount: 22,
+    members: 22,
     maxMembers: 28,
     isPublic: true,
-    tags: ['social', 'experiments', 'behavior', 'applications'],
+    createdBy: 'Dr. Emma Thompson',
     createdAt: '2024-01-25',
-    lastActivity: '2024-02-01'
+    tags: ['social', 'experiments', 'behavior', 'applications']
   },
   {
     id: 'neuropsych-brain-study',
     name: 'Neuropsychology & Brain Sciences',
     description: 'Advanced study group exploring brain-behavior relationships, neuroanatomy, and neuropsychological assessment. Ideal for students interested in neuropsychology careers.',
     topic: 'Neuropsychology',
-    memberCount: 12,
+    members: 12,
     maxMembers: 15,
     isPublic: false,
-    tags: ['neuropsychology', 'brain', 'assessment', 'advanced'],
+    createdBy: 'Dr. Robert Kim',
     createdAt: '2024-01-18',
-    lastActivity: '2024-01-30'
+    tags: ['neuropsychology', 'brain', 'assessment', 'advanced']
   },
   {
     id: 'behavioral-analysis-group',
     name: 'Applied Behavior Analysis Study Group',
     description: 'Focused on learning principles, behavior modification techniques, and ABA applications. Great for students pursuing BCBA certification or working with special populations.',
     topic: 'Behavioral Psychology',
-    memberCount: 16,
+    members: 16,
     maxMembers: 20,
     isPublic: true,
-    tags: ['ABA', 'behavior-modification', 'BCBA', 'applications'],
+    createdBy: 'Dr. Jennifer Walsh',
     createdAt: '2024-01-12',
-    lastActivity: '2024-02-02'
+    tags: ['ABA', 'behavior-modification', 'BCBA', 'applications']
   }
 ]
 

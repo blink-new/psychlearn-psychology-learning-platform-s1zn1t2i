@@ -105,6 +105,16 @@ export interface StudyGroup {
   tags: string[]
 }
 
+export interface Quiz {
+  id: string
+  topicId: string
+  title: string
+  description: string
+  questions: QuizQuestion[]
+  timeLimit?: number
+  passingScore?: number
+}
+
 export interface QuizAttempt {
   id: string
   topicId: string
@@ -113,4 +123,25 @@ export interface QuizAttempt {
   totalQuestions: number
   answers: number[]
   completedAt: string
+}
+
+export interface QuizBookmark {
+  id: string
+  userId: string
+  quizId: string
+  topicId: string
+  bookmarkedAt: string
+}
+
+export interface QAEntry {
+  id: string
+  topicId: string
+  userId: string
+  question: string
+  answer: string
+  isPublic: boolean
+  upvotes: number
+  downvotes: number
+  createdAt: string
+  updatedAt: string
 }
